@@ -1,0 +1,86 @@
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# compiled output
+dist
+tmp
+out-tsc
+*.tsbuildinfo
+.expo
+.expo-shared
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
+
+# Replit
+.cache/
+.local/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Internal Replit / agent / conversation files
+.conversation/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Local database
+*.db
+*.sqlite
+*.sqlite3
+
+# Internal agent files
+.agents/
+
+# Replit internal files
+.replit
+.replitignore
+.replit-artifact/
+
+# Internal pasted prompts
+attached_assets/Pasted-You-are-working-on-my-existing-SITEFLOW-application-for_1789653930282.txt
+
+# Internal prompt and screenshot artifacts
+attached_assets/

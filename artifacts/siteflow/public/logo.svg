@@ -1,0 +1,7 @@
+<svg width="160" height="44" viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="44" height="44" rx="12" fill="#D98A32"/>
+  <path d="M11 27.5V25.2C11 20.67 14.67 17 19.2 17H24.8C29.33 17 33 20.67 33 25.2V27.5H29.2V25.2C29.2 22.77 27.23 20.8 24.8 20.8H19.2C16.77 20.8 14.8 22.77 14.8 25.2V27.5H11Z" fill="#0A0D0B"/>
+  <path d="M13 28.3H31V32.4H13V28.3Z" fill="#0A0D0B"/>
+  <path d="M17.2 13.6H26.8L29.2 17H14.8L17.2 13.6Z" fill="#0A0D0B"/>
+  <text x="54" y="28" fill="#F1EDE4" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="2">SITEFLOW</text>
+</svg>

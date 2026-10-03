@@ -1,0 +1,29 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "test": "pnpm --filter @workspace/api-server test",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "build:production": "pnpm --filter @workspace/siteflow build && pnpm --filter @workspace/api-server build",
+    "start:production": "pnpm --filter @workspace/api-server start"
+  },
+  "private": true,
+  "pnpm": {
+    "overrides": {
+      "fast-uri": "4.3.2",
+      "js-yaml": "4.3.1",
+      "nanoid": "3.3.18"
+    }
+  },
+  "dependencies": {
+    "@replit/connectors-sdk": "^0.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "typescript": "~5.9.3"
+  }
+}

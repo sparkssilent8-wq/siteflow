@@ -1,0 +1,12 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "python3 -m pip install -r artifacts/api-server/backend/requirements.txt -r artifacts/api-server/ml/requirements.txt && pnpm install --frozen-lockfile && pnpm run build:production"
+  },
+  "deploy": {
+    "startCommand": "pnpm run start:production",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}

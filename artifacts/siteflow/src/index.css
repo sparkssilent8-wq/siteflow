@@ -1,0 +1,131 @@
+@layer theme, base, clerk, components, utilities;
+@import "tailwindcss";
+@import "@clerk/themes/shadcn.css";
+
+@theme {
+  --color-siteflow-bg: #0A0D0B;
+  --color-siteflow-bgSubtle: #111613;
+  --color-siteflow-greenDeep: #0C2119;
+  --color-siteflow-emerald: #16382A;
+  --color-siteflow-amber: #D98A32;
+  --color-siteflow-amberBright: #F2A84B;
+  --color-siteflow-cream: #F1EDE4;
+  --color-siteflow-muted: #9B9B91;
+  --color-siteflow-mint: #8BE0C0;
+  --color-siteflow-border: rgba(217, 138, 50, 0.2);
+  --color-siteflow-borderSubtle: rgba(241, 237, 228, 0.08);
+  --color-siteflow-card: #0E1310;
+  --color-siteflow-cardLight: #141B16;
+  --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-family-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-family-display: "Space Grotesk", Inter, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --sf-bg: #0A0D0B;
+  --sf-bg-subtle: #111613;
+  --sf-green-deep: #0C2119;
+  --sf-emerald: #16382A;
+  --sf-amber: #D98A32;
+  --sf-amber-bright: #F2A84B;
+  --sf-cream: #F1EDE4;
+  --sf-muted: #9B9B91;
+  --sf-mint: #8BE0C0;
+}
+
+body {
+  margin: 0;
+  background-color: #0A0D0B;
+  color: #F1EDE4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse 60% 40% at 50% -10%, rgba(217, 138, 50, 0.08), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 90% 20%, rgba(12, 33, 25, 0.25), transparent 60%);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A241C;
+  border-radius: 3px;
+  border: 1px solid rgba(217, 138, 50, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #253328;
+}
+
+/* Glass & Card styles */
+.siteflow-card {
+  background: rgba(14, 19, 16, 0.88);
+  border: 1px solid rgba(217, 138, 50, 0.18);
+  border-radius: 0.85rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.siteflow-card:hover {
+  border-color: rgba(217, 138, 50, 0.35);
+  box-shadow: 0 4px 24px -4px rgba(217, 138, 50, 0.1);
+}
+
+.siteflow-card-mint {
+  background: rgba(14, 19, 16, 0.88);
+  border: 1px solid rgba(139, 224, 192, 0.25);
+  border-radius: 0.85rem;
+  backdrop-filter: blur(16px);
+}
+.siteflow-card-mint:hover {
+  border-color: rgba(139, 224, 192, 0.45);
+  box-shadow: 0 4px 24px -4px rgba(139, 224, 192, 0.12);
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px -5px rgba(217, 138, 50, 0.35);
+}
+
+.glow-mint {
+  box-shadow: 0 0 25px -5px rgba(139, 224, 192, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(22, 56, 42, 0.5);
+}
+
+/* Floating animation keyframes */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes floatDelay {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+@keyframes scanBeam {
+  0% { transform: translateY(-100%) scaleY(0.8); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(100%) scaleY(1.2); opacity: 0; }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: floatDelay 7s ease-in-out 1.5s infinite;
+}
+
+.technical-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(241, 237, 228, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(241, 237, 228, 0.03) 1px, transparent 1px);
+}
